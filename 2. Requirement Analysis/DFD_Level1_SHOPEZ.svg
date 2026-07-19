@@ -1,0 +1,116 @@
+<svg viewBox="0 0 1000 650" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="1000" height="650" fill="#ffffff"/>
+  <text x="500" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a1a">SHOPEZ — Level 1 Data Flow Diagram</text>
+
+  <!-- External entities (ovals) -->
+  <ellipse cx="90" cy="150" rx="75" ry="42" fill="#e8f0fe" stroke="#3b5bdb" stroke-width="2"/>
+  <text x="90" y="146" text-anchor="middle" font-size="14" font-weight="bold">Customer</text>
+  <text x="90" y="162" text-anchor="middle" font-size="11">(External Entity)</text>
+
+  <ellipse cx="90" cy="480" rx="75" ry="42" fill="#e8f0fe" stroke="#3b5bdb" stroke-width="2"/>
+  <text x="90" y="476" text-anchor="middle" font-size="14" font-weight="bold">Admin</text>
+  <text x="90" y="492" text-anchor="middle" font-size="11">(External Entity)</text>
+
+  <ellipse cx="910" cy="150" rx="80" ry="42" fill="#e8f0fe" stroke="#3b5bdb" stroke-width="2"/>
+  <text x="910" y="146" text-anchor="middle" font-size="14" font-weight="bold">Payment</text>
+  <text x="910" y="162" text-anchor="middle" font-size="14" font-weight="bold">Gateway</text>
+
+  <!-- Processes (numbered rectangles) -->
+  <rect x="290" y="60" width="180" height="60" rx="6" fill="#fff3bf" stroke="#e8a800" stroke-width="2"/>
+  <text x="380" y="85" text-anchor="middle" font-size="13" font-weight="bold">1.0 Manage</text>
+  <text x="380" y="102" text-anchor="middle" font-size="13" font-weight="bold">Authentication</text>
+
+  <rect x="290" y="160" width="180" height="60" rx="6" fill="#fff3bf" stroke="#e8a800" stroke-width="2"/>
+  <text x="380" y="185" text-anchor="middle" font-size="13" font-weight="bold">2.0 Browse &amp;</text>
+  <text x="380" y="202" text-anchor="middle" font-size="13" font-weight="bold">Search Products</text>
+
+  <rect x="290" y="260" width="180" height="60" rx="6" fill="#fff3bf" stroke="#e8a800" stroke-width="2"/>
+  <text x="380" y="285" text-anchor="middle" font-size="13" font-weight="bold">3.0 Manage</text>
+  <text x="380" y="302" text-anchor="middle" font-size="13" font-weight="bold">Cart</text>
+
+  <rect x="290" y="360" width="180" height="60" rx="6" fill="#fff3bf" stroke="#e8a800" stroke-width="2"/>
+  <text x="380" y="385" text-anchor="middle" font-size="13" font-weight="bold">4.0 Process</text>
+  <text x="380" y="402" text-anchor="middle" font-size="13" font-weight="bold">Checkout &amp; Payment</text>
+
+  <rect x="290" y="460" width="180" height="60" rx="6" fill="#fff3bf" stroke="#e8a800" stroke-width="2"/>
+  <text x="380" y="485" text-anchor="middle" font-size="13" font-weight="bold">5.0 Track</text>
+  <text x="380" y="502" text-anchor="middle" font-size="13" font-weight="bold">Order Status</text>
+
+  <rect x="600" y="360" width="180" height="60" rx="6" fill="#fff3bf" stroke="#e8a800" stroke-width="2"/>
+  <text x="690" y="385" text-anchor="middle" font-size="13" font-weight="bold">6.0 Manage</text>
+  <text x="690" y="402" text-anchor="middle" font-size="13" font-weight="bold">Products (Admin)</text>
+
+  <!-- Data stores (plain rectangles, open-ended style) -->
+  <rect x="600" y="60" width="180" height="50" fill="#e6fcf5" stroke="#0ca678" stroke-width="2"/>
+  <text x="690" y="90" text-anchor="middle" font-size="13" font-weight="bold">D1 | Users DB</text>
+
+  <rect x="600" y="160" width="180" height="50" fill="#e6fcf5" stroke="#0ca678" stroke-width="2"/>
+  <text x="690" y="190" text-anchor="middle" font-size="13" font-weight="bold">D2 | Products DB</text>
+
+  <rect x="600" y="260" width="180" height="50" fill="#e6fcf5" stroke="#0ca678" stroke-width="2"/>
+  <text x="690" y="290" text-anchor="middle" font-size="13" font-weight="bold">D3 | Cart DB</text>
+
+  <rect x="600" y="460" width="180" height="50" fill="#e6fcf5" stroke="#0ca678" stroke-width="2"/>
+  <text x="690" y="490" text-anchor="middle" font-size="13" font-weight="bold">D4 | Orders DB</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#495057"/>
+    </marker>
+  </defs>
+
+  <line x1="165" y1="140" x2="288" y2="95" stroke="#495057" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="200" y="105" font-size="10">login/signup</text>
+
+  <line x1="165" y1="160" x2="288" y2="190" stroke="#495057" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="185" y="185" font-size="10">search query</text>
+
+  <line x1="165" y1="170" x2="288" y2="290" stroke="#495057" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="175" y="240" font-size="10">add/remove item</text>
+
+  <line x1="165" y1="180" x2="288" y2="385" stroke="#495057" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="175" y="330" font-size="10">place order</text>
+
+  <line x1="165" y1="190" x2="288" y2="480" stroke="#495057" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="150" y="420" font-size="10">check status</text>
+
+  <line x1="470" y1="90" x2="598" y2="85" stroke="#495057" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="500" y="80" font-size="10">store/verify creds</text>
+
+  <line x1="470" y1="190" x2="598" y2="185" stroke="#495057" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="500" y="180" font-size="10">fetch catalog</text>
+
+  <line x1="470" y1="290" x2="598" y2="285" stroke="#495057" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="500" y="280" font-size="10">cart items</text>
+
+  <line x1="470" y1="395" x2="780" y2="395" stroke="#495057" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="530" y="415" font-size="10">order details</text>
+
+  <line x1="480" y1="380" x2="838" y2="180" stroke="#495057" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="680" y="270" font-size="10">payment request</text>
+
+  <line x1="838" y1="140" x2="480" y2="390" stroke="#495057" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="800" y="120" font-size="10">payment status</text>
+
+  <line x1="470" y1="480" x2="598" y2="485" stroke="#495057" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="500" y="475" font-size="10">read order</text>
+
+  <line x1="165" y1="470" x2="600" y2="390" stroke="#495057" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="330" y="440" font-size="10">add/update product</text>
+
+  <line x1="780" y1="380" x2="700" y2="215" stroke="#495057" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="740" y="300" font-size="10">update catalog</text>
+
+  <!-- Legend -->
+  <g transform="translate(30,560)">
+    <ellipse cx="15" cy="10" rx="15" ry="10" fill="#e8f0fe" stroke="#3b5bdb" stroke-width="1.5"/>
+    <text x="40" y="14" font-size="12">External Entity</text>
+    <rect x="180" y="0" width="30" height="20" rx="4" fill="#fff3bf" stroke="#e8a800" stroke-width="1.5"/>
+    <text x="220" y="14" font-size="12">Process (numbered)</text>
+    <rect x="400" y="0" width="30" height="20" fill="#e6fcf5" stroke="#0ca678" stroke-width="1.5"/>
+    <text x="440" y="14" font-size="12">Data Store</text>
+    <line x1="600" y1="10" x2="640" y2="10" stroke="#495057" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <text x="650" y="14" font-size="12">Data Flow</text>
+  </g>
+</svg>
