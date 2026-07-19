@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopEZ — Shopping, Simplified</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo" href="#top">Shop<span>EZ</span></a>
+
+      <nav class="main-nav">
+        <a href="#catalog">Catalog</a>
+        <a href="#deals">Deals</a>
+        <a href="#sellers">For Sellers</a>
+      </nav>
+
+      <div class="header-actions">
+        <input class="search-input" type="text" id="searchInput" placeholder="Search products…">
+        <button class="cart-btn" id="cartToggle" aria-label="Open cart">
+          Cart <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <div class="wrap hero-row">
+      <div class="hero-copy">
+        <p class="eyebrow">Retail, reimagined</p>
+        <h1>Everything you<br>need. <em>Nothing</em><br>you don't.</h1>
+        <p class="hero-sub">Browse a curated catalog, compare real reviews, and check out in seconds — that's the whole promise.</p>
+        <a href="#catalog" class="btn-primary">Start browsing</a>
+      </div>
+      <div class="hero-receipt" aria-hidden="true">
+        <div class="receipt">
+          <p class="receipt-title">SHOPEZ</p>
+          <p class="receipt-sub">order summary</p>
+          <div class="receipt-line"><span>Wireless Earbuds</span><span>₹1,499</span></div>
+          <div class="receipt-line"><span>Cotton Kurta</span><span>₹899</span></div>
+          <div class="receipt-line"><span>Desk Lamp</span><span>₹649</span></div>
+          <div class="receipt-divider"></div>
+          <div class="receipt-line total"><span>Total</span><span>₹3,047</span></div>
+          <p class="receipt-thanks">✓ order confirmed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CATEGORY FILTER ===== -->
+  <section class="catalog" id="catalog">
+    <div class="wrap">
+      <div class="catalog-head">
+        <h2>The catalog</h2>
+        <div class="filters" id="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="Electronics">Electronics</button>
+          <button class="filter-btn" data-filter="Fashion">Fashion</button>
+          <button class="filter-btn" data-filter="Home">Home</button>
+          <button class="filter-btn" data-filter="Beauty">Beauty</button>
+        </div>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== SELLER DASHBOARD TEASER ===== -->
+  <section class="sellers" id="sellers">
+    <div class="wrap sellers-row">
+      <div>
+        <p class="eyebrow eyebrow-light">For sellers</p>
+        <h2>Run your storefront from one dashboard.</h2>
+        <p class="hero-sub light">Track orders, watch sales trends, and manage inventory without leaving the page.</p>
+      </div>
+      <ul class="seller-stats">
+        <li><span class="stat-num">1,204</span><span class="stat-label">orders this month</span></li>
+        <li><span class="stat-num">₹4.8L</span><span class="stat-label">revenue tracked</span></li>
+        <li><span class="stat-num">98%</span><span class="stat-label">on-time delivery</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <p class="logo">Shop<span>EZ</span></p>
+      <p class="footer-note">Built for the Full Stack Web Development track — SkillValid.</p>
+    </div>
+  </footer>
+
+  <!-- ===== CART DRAWER ===== -->
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-head">
+      <p class="receipt-title">YOUR CART</p>
+      <button id="cartClose" aria-label="Close cart">×</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty" id="cartEmpty">Your cart is empty.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="receipt-line total"><span>Total</span><span id="cartTotal">₹0</span></div>
+      <button class="btn-primary full" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
